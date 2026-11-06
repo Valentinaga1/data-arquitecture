@@ -24,8 +24,6 @@ Las instancias EC2 se conectan a RDS por el puerto 3306. La base de datos está 
 
 ## 3. Justificación técnica
 
-## 3. Justificación técnica
-
 Elegí **Amazon RDS for MySQL** (db.t3.micro, Multi-AZ) en lugar de DynamoDB por tres motivos.
 
 **Relaciones y JOINs.** Los datos de la app están muy relacionados: un estudiante se inscribe en muchos cursos, cada curso tiene muchos estudiantes y cada compra genera un pago. Con SQL, una consulta como "cursos de un estudiante y el estado de su pago" se resuelve con un JOIN. DynamoDB no admite JOINs, así que habría que duplicar datos o hacer varias consultas desde el código.
