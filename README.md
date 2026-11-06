@@ -19,7 +19,6 @@
 
 ## 2. Diagrama de integración
 
-![Diagrama de arquitectura de EduCloud](Arquitectura_Datos_RDS_EduCloud.png)
 
 Las instancias EC2 se conectan a RDS por el puerto 3306. La base de datos está en subredes privadas con despliegue Multi-AZ: una instancia primaria en la AZ A y una standby en la AZ B.
 
